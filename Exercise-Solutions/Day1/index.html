@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.querySelector('.root')
+
+        const myName = <h1>Akash Singh</h1>
+        const mainStyle = {
+            backgroundColor : 'rgb(255,50,50)',
+            fontSize : '20px',
+            color : 'rgb(255,255,255,0.8)',
+            padding : '10px',
+            display : 'flex',
+            flexDirection : 'column',
+            alignItems: 'center'
+        }
+        const main = (
+        <main style ={mainStyle}>
+          <h1>Akash Singh</h1>
+          
+          <p>Country : India</p>
+          <p>Title   : Student</p>
+          <p>Gender  : Male</p>
+          <p>Email   : akash142002singh@gmail.com</p>
+          <p>Phone No. : 626*****62</p>
+          
+        </main>
+     )
+
+        const footStyle = {
+            backgroundColor : 'rgb(255,100,50)',
+            padding : '10px 20px',
+            textAlign :'center',
+            width : '100%',
+            position : 'Absolute',
+            bottom : '0'            
+        }
+        
+        const footer = (
+        <footer style={footStyle}>
+            <p>Copyright@2023</p>
+        </footer>
+     )
+
+        const appStyle = {
+            lineHeight: '1.5',
+            fontFamily: 'Monospace',
+        }
+
+        const app =(
+            <div style = {appStyle}>
+                {main}
+                {footer}    
+            </div>
+        )
+
+        const reactRoot = ReactDOM.createRoot(rootElement)
+        reactRoot.render(app)
+      </script>
+</body>
+</html>

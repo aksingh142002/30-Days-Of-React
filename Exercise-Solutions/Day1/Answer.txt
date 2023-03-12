@@ -1,0 +1,334 @@
+### Exercises
+
+#### Exercises: What is React?
+
+1. What is React?
+
+Ans. React is javascript library for building reusable user interfaces. It was created by facebook(META).
+     It is used for making single page applications.It is easy to make UI components with React.
+     The latest version off React is 18.2.0.
+
+
+2. What is a library?
+
+Ans. React library is collection of components and modules for designing elements whch are 
+     to be used in React application.
+
+3. What is a single page application?
+
+Ans. Single page application is a web application which dynamically interact with user through 
+     a single HTML page by updating the content through components and without using new webpage. 
+
+4. What is a component ?
+
+Ans. A React component is a javascript function which can work with markup i.e, HTML and JS combined.
+     Component are reusable code which are a part of React application UI.
+
+5. What is the latest version of React?
+
+Ans. The latest version off React is 18.2.0.
+
+6. What is DOM?
+
+Ans. The Document Object Model (DOM) is a programming API for HTML and XML documents. 
+     It defines the logical structure of web documents and the way a web document is accessed
+     and manipulated.
+
+7. What is React Virtual DOM?
+
+Ans. React Virtual DOM is a virtual, lightweight javascript representation which acts as a 
+     real DOM.It is faster than real DOM so for every object that exists in the original DOM, there is
+     an object for that in React Virtual DOM. 
+
+8. What does a web application or a website(composed of) have?
+
+Ans. A web application, or a website, is made of buttons, links, forms with different input fields,
+     header, footer, sections, articles, texts, images, audios, videos and boxes with different shapes.
+
+#### Exercises: Why React?
+
+1. Why did you chose to use react?
+
+Ans. I choose react because it is the most popular JS library used for designing UI.
+
+2. What measures do you use to know popularity ?
+
+Ans. The measures to know popularity are firstly its big community secondly
+     its Github repository stars, watched, and forks.
+
+3. What is more popular, React or Vue ?
+
+Ans. React(40.1%) is more popular than Vue(18.9%) .
+
+#### Exercises: JSX
+
+1. What is an HTML element?
+
+Ans. HTML elements are the tags which structure the webpage.
+
+2. How to write a self closing HTML element?
+
+Ans. <img src="" />
+
+3. What is an HTML attribute? Write some of them
+
+Ans. HTML attribute are additional information of the HTML elements.
+     Some of them are src,alt,href,style,etc.
+
+4. What is JSX?
+
+Ans. JSX stands for JavaScript XML. It is the combination of HTML elements and JavaScript.
+
+5. What is babel?
+
+Ans. Babel is the transpiler that helps convert the JS code into the one the browser can understand.
+
+6. What is a transpiler?
+
+Ans. Transpiler are tools which convert code written in one language into equivalent code in another language.
+
+#### Exercises: JSX Elements
+
+1. What is a JSX element?
+
+Ans. JSX element are the JS code having HTML elements.
+
+2. Write your name in a JSX element and store it in a name variable
+
+Ans. const myName = <p>Akash Singh</p>
+
+3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+
+Ans. const main = (
+        <main>
+          <h1>Akash Singh</h1>
+          <p>
+               Country : India
+               Title   : Student
+               Gender  : Male
+               Email   : akash142002singh@gmail.com
+               Phone No. : 626*****62
+          </p>
+        </main>
+     )
+4. Write a footer JSX element
+
+Ans. const footer = (
+          <footer>
+               <p>Copyright@2023</p>
+          </footer>
+     )
+
+#### Exercises: Inline Style
+
+1. Create a style object for the main JSX
+
+const mainStyle = {
+            backgroundColor : 'rgb(255,50,50)',
+            fontSize : '20px',
+            color : 'rgb(255,255,255,0.8)',
+            padding : '10px',
+        }
+
+2. Create a style object for the footer and app JSX
+
+     const footStyle = {
+            backgroundColor : 'rgb(255,100,50)',
+            padding : '10px 20px',
+            textAlign :'center',
+            width : '100%',
+            position : 'Absolute',
+            bottom : '0'            
+        }
+
+     const appStyle = {
+            lineHeight: '1.5',
+            fontFamily: 'Monospace',
+        }
+
+3. Add more styles to the JSX elements
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="root"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        const rootElement = document.querySelector('.root')
+
+        const myName = <h1>Akash Singh</h1>
+        const mainStyle = {
+            backgroundColor : 'rgb(255,50,50)',
+            fontSize : '20px',
+            color : 'rgb(255,255,255,0.8)',
+            padding : '10px',
+            display : 'flex',
+            flexDirection : 'column',
+            alignItems: 'center'
+        }
+        const main = (
+        <main style ={mainStyle}>
+          <h1>Akash Singh</h1>
+          
+          <p>Country : India</p>
+          <p>Title   : Student</p>
+          <p>Gender  : Male</p>
+          <p>Email   : akash142002singh@gmail.com</p>
+          <p>Phone No. : 626*****62</p>
+          
+        </main>
+     )
+
+        const footStyle = {
+            backgroundColor : 'rgb(255,100,50)',
+            padding : '10px 20px',
+            textAlign :'center',
+            width : '100%',
+            position : 'Absolute',
+            bottom : '0'            
+        }
+        
+        const footer = (
+        <footer style={footStyle}>
+            <p>Copyright@2023</p>
+        </footer>
+     )
+
+        const appStyle = {
+            lineHeight: '1.5',
+            fontFamily: 'Monospace',
+        }
+
+        const app =(
+            <div style = {appStyle}>
+                {main}
+                {footer}    
+            </div>
+        )
+
+        const reactRoot = ReactDOM.createRoot(rootElement)
+        reactRoot.render(app)
+      </script>
+</body>
+</html>
+
+#### Exercises: Internal Styles
+
+1. Apply different styles to your JSX elements
+
+#### Exercise: Inject data to JSX
+
+1. Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
+
+    <script type="text/babel">
+      // To get the root element from the HTML document
+      const rootElement = document.querySelector('.root')
+      // JSX element, header
+      const welcome = 'Welcome to 30 Days Of React Challenge'
+      const title = 'Getting Started React'
+      const subtitle = 'JavaScript Library'
+      const author = {
+        firstName: 'Asabeneh',
+        lastName: 'Yetayeh',
+      }
+      const date = 'Oct 2, 2020'
+
+      // JSX element, header
+      const header = (
+        <header>
+          <div className='header-wrapper'>
+            <h1>{welcome}</h1>
+            <h2>{title}</h2>
+            <h3>{subtitle}</h3>
+            <p>
+              Instructor: {author.firstName} {author.lastName}
+            </p>
+            <small>Date: {date}</small>
+          </div>
+        </header>
+      )
+
+      const numOne = 3
+      const numTwo = 2
+
+      const result = (
+        <p>
+          {numOne} + {numTwo} = {numOne + numTwo}
+        </p>
+      )
+
+      const yearBorn = 1820
+      const currentYear = 2020
+      const age = currentYear - yearBorn
+      const personAge = (
+        <p>
+          {' '}
+          {author.firstName} {author.lastName} is {age} years old
+        </p>
+      )
+
+      // JSX element, main
+      const techs = ['HTML', 'CSS', 'JavaScript']
+      const techsFormatted = techs.map((tech) => <li key={tech}>{tech}</li>)
+
+      // JSX element, main
+      const main = (
+        <main>
+          <div className='main-wrapper'>
+            <p>
+              Prerequisite to get started{' '}
+              <strong>
+                <em>react.js</em>
+              </strong>
+              :
+            </p>
+            <ul>{techsFormatted}</ul>
+            {result}
+            {personAge}
+          </div>
+        </main>
+      )
+
+      const copyRight = 'Copyright 2020'
+
+      // JSX element, footer
+      const footer = (
+        <footer>
+          <div className='footer-wrapper'>
+            <p>{copyRight}</p>
+          </div>
+        </footer>
+      )
+
+      // JSX element, app
+      const app = (
+        <div className='app'>
+          {header}
+          {main}
+          {footer}
+        </div>
+      )
+
+      const reactRoot = ReactDOM.createRoot(rootElement)
+        reactRoot.render(app)
+    </script>
+
+🎉 CONGRATULATIONS ! 🎉
+
+[<< Day 1](../01_Day_JavaScript_Refresher/01_javascript_refresher.md) | [Day 3 >>](../03_Day_Setting_Up/03_setting_up.md)
